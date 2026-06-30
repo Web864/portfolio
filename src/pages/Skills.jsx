@@ -3,7 +3,7 @@ import React from 'react'
 function Skills() {
   return (
     <div id='skills'>
-        <div className="section-wrap bg-[var(--surface)]">
+        <div className="w-full section-wrap bg-[var(--surface)]">
             <div className="section-header fade-up visible">
                 <div className="section-tag">Tech STack</div>
                 <h2 className="section-title">Skills & Technology</h2>

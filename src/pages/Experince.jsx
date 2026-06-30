@@ -3,7 +3,7 @@ import React from "react";
 function Experince() {
   return (
     <div id="experince">
-      <div className="section-wrap bg-[var(--bg)]">
+      <div className="w-full section-wrap bg-[var(--bg)]">
         <div className="section-header fade-up visible">
           <p className="section-tag">Journey</p>
           <h2 className="section-title">Experience & Education</h2>
