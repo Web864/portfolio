@@ -16,7 +16,7 @@ function Experince() {
             <div className="timeline-dot"></div>
             <div className="timeline-date">2024 -- Present</div>
             <div className="timeline-role">Software Developer</div>
-            <div className="timeline-company">Career Intitute . FUll Time</div>
+            <div className="timeline-company">Career Intitute . Full Time</div>
             <div className="timeline-desc">
               Building and maintaining full-stack web and mobile applications.
               Working across the MERN stack to deliver scalable solutions for
