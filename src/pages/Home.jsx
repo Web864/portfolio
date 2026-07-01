@@ -19,7 +19,7 @@ function Home() {
                     <h3>Mern Stack Devloper</h3>
                 </div>
                 <div className="hero-description">
-                   I craft scalable, high-performance web applications with a <br />focus on clean architecture and delightful user experiences. <br /> Passionate about turning complex ideas  into elegant digital products.
+                   I craft scalable, high-performance web applications with a focus on clean architecture and delightful user experiences.  Passionate about turning complex ideas  into elegant digital products.
                 </div>
                 <div className="hero-cta flex m-5 gap-5">
                 <a href="#projects" className='btn work-btn py-2 px-5 rounded'>View My Work</a>

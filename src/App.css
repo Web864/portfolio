@@ -61,14 +61,14 @@
     font-size: 1rem;
     line-height: 1.8;
     color: rgba(232, 232, 240, 0.65);
-    max-width: 480px;
+    /* max-width: 480px; */
     margin-bottom: 2.5rem;
+    text-wrap: wrap;
 }
 .hero-inner {
-    max-width: 1200px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* max-width: 1200px; */
+    /* width: 100%; */
+    
     gap: 4rem;
     align-items: center;
 }
@@ -103,8 +103,8 @@
     padding: 6rem 6%;
 }
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
     align-items: start;
 }
@@ -117,7 +117,7 @@
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.hero-visual {
+.hero-visuals {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,8 +313,8 @@ section {
     max-width: 540px;
 }
  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 .fade-up.visible {
@@ -381,8 +381,8 @@ section {
     margin-bottom: 3.5rem;
 }
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 .projects-gredient-1 {
@@ -396,13 +396,15 @@ section {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 }
 .projects-img-icon {
     font-size: 3rem;
     opacity: 0.6;
     padding:21px;
+    margin: auto;
+
 }
 .project-body {
     padding: 1.4rem;
@@ -465,8 +467,8 @@ section {
     color: var(--muted);
 }
 .projects-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 .project-card {
@@ -546,8 +548,8 @@ section {
     background: var(--surface);
 }
 .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
     align-items: start;
 }
@@ -627,8 +629,9 @@ section {
 .contact-card-icon {
     width: 42px;
     height: 42px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
     border-radius: 10px;
     background: rgba(124, 110, 240, 0.16);
     font-size: 1.1rem;
@@ -668,4 +671,40 @@ section {
     font-size: 0.8rem;
     color: var(--muted);
     margin-top: 0.25rem;
+}
+
+@media (max-width:992px){
+.hero-inner,.about-grid,.contact-wrapper,.projects-grid,.skills-grid{
+display:flex;flex-direction:column;
+}
+.project-card,.skill-chip,.contact-form,.contact-info,.about-text,.skills-Perc,.hero-visual{
+width:100%;
+}
+.hero-inner{
+    flex-direction: column-reverse;
+}
+.profile-ring {
+ height:177px;
+ width:177px;
+}
+.stats-row{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+.stat{
+    border: 1px solid var(--accent);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.float-badge.top-right {
+        right: -68px;
+        top: 177px;
+}
+.section-wrap {
+
+padding: 30px ;
+}
 }
