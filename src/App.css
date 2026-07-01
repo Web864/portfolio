@@ -98,8 +98,8 @@
     background: linear-gradient(135deg, var(--accent), var(--accent2));
 }
 .section-wrap{
-        max-width: 1500px;
-    margin: 0 auto;
+        /* max-width: 1500px; */
+    margin: 0;
     padding: 6rem 6%;
 }
 .about-grid {
@@ -274,8 +274,8 @@ section {
     z-index: 1;
 }
 .section-wrap {
-    max-width: 1500px;
-    margin: 0 auto;
+    /* max-width: 1500px;
+    margin: 0 auto; */
     padding: 60px 6%;
 }
 .fade-up.visible {
