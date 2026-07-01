@@ -23,7 +23,7 @@ function Home() {
                 </div>
                 <div className="hero-cta flex m-5 gap-5">
                 <a href="#projects" className='btn work-btn py-2 px-5 rounded'>View My Work</a>
-                <a href="#contact" className='btn  hover:text-[var(--accent)] hover:border hover:border-[var(--accent)] py-2 px-5'>
+                <a href="#contact" className='btn  hover:text-[var(--accent)] get-in-touch hover:border hover:border-[var(--accent)] py-2 px-5'>
                     <i className="fa-solid fa-envelope "></i>
                     Get In Touch</a>
                 </div>

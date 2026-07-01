@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div id="#about"
-      className="w-full bg-[var(--surface)] flex  items-center  p-5 about  text-[var(--text);
+      className="w-full bg-[var(--surface)] flex  items-center about  text-[var(--text);
 ] "
     >
       <div className="section-wrap">

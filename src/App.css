@@ -727,5 +727,14 @@ padding: 30px ;
 }
 .hero-cta {
     flex-direction: column-reverse;
+    text-align: center;
+}
+.hero-description {
+    max-width: 100%;
+
+}
+.get-in-touch{
+    border: 1px solid var(--accent);
+    color: var(--accent);
 }
 }
