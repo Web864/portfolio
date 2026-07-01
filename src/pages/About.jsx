@@ -16,7 +16,7 @@ function About() {
             <div className="about-text">
               <p>
                 Hi i'm <strong className="text-white">Rabia Naz</strong>, a{" "}
-                <strong className="text-white">Mern-stack Developer</strong>i studied at{" "}
+                <strong className="text-white">Mern-stack Developer</strong>, i studied at{" "}
                 <strong className="text-white">GCUF</strong>
               </p>
               <p>

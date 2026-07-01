@@ -15,7 +15,7 @@ function Projects() {
         <div className="projects-grid">
         <div className="project-card fade-up visible">
           <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">🛒</div>
+            <div className="projects-img-icon">🎓</div>
             <div className="project-body">
               <div className="project-tags">
                 <div className="tag tag-react">HTML</div>
@@ -40,7 +40,7 @@ function Projects() {
         </div>
         <div className="project-card fade-up visible">
           <div className="project-img project-gradient-1">
-            <div className ="projects-img-icon">🛒</div>
+            <div className ="projects-img-icon">🏢</div>
             <div className="project-body">
               <div className="project-tags">
                 <div className="tag tag-react">HTML</div>
@@ -90,7 +90,7 @@ function Projects() {
         </div>
         <div className="project-card fade-up visible">
           <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">🛒</div>
+            <div className="projects-img-icon">💰</div>
             <div className="project-body">
               <div className="project-tags">
                 <div className="tag tag-react">HTML</div>
@@ -115,7 +115,7 @@ function Projects() {
         </div>
         <div className="project-card fade-up visible">
           <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">🛒</div>
+            <div className="projects-img-icon">🌈</div>
             <div className="project-body">
               <div className="project-tags">
                 <div className="tag tag-react">HTML</div>
@@ -140,7 +140,7 @@ function Projects() {
         </div>
         <div className="project-card fade-up visible">
           <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">🛒</div>
+            <div className="projects-img-icon">💼</div>
             <div className="project-body">
               <div className="project-tags">
                 <div className="tag tag-react">HTML</div>
