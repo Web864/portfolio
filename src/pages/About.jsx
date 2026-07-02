@@ -2,14 +2,14 @@ import React from "react";
 
 function About() {
   return (
-    <div id="#about"
-      className="w-full bg-[var(--surface)] flex  items-center about  text-[var(--text);
-] "
+    <div
+      id="about"
+      className="w-full bg-[var(--surface)] flex items-center about text-[var(--text)]"
     >
       <div className="section-wrap">
         <div className="about-grid">
           <div className="fade-up visible">
-            <p className="section-tag text-[var(--accent3)">About Me</p>
+            <p className="section-tag text-[var(--accent3)]">About Me</p>
             <h2 className="section-title">
               Passionate about building things that matter
             </h2>

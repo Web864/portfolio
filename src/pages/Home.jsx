@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import avatar from "../assets/img/avtar.png";
 
 function Home() {
   return (
@@ -58,7 +59,7 @@ function Home() {
                 <div className="profile-ring">
                     <div className="profile-inner">
                         <span className="profile-initials">
-                            <img src="./assets/img/logo.png" alt="" />
+                            <img src={avatar} alt="Rabia Naz" />
                         </span>
                     </div>
                 </div>
