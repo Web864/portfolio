@@ -289,7 +289,7 @@ section {
 }
 
 .item-bar-width {
-    height: 36%;
+    height: 100%;
     min-height: inherit;
     background: linear-gradient(90deg, var(--accent), var(--accent2));
     border-radius: 0.125rem;
@@ -806,6 +806,11 @@ section {
 }
 
 @media (max-width: 62rem) {
+    #hero {
+        min-height: auto;
+        padding: 2rem 1.5rem 3rem;
+    }
+
     .hero-inner,
     .about-grid,
     .contact-wrapper,
@@ -816,7 +821,17 @@ section {
     }
 
     .hero-inner {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .hero-inner {
         flex-direction: column-reverse;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
     }
 
     .hero-content,
@@ -837,17 +852,22 @@ section {
         text-align: center;
         gap: 1.25rem;
         padding-top: 1.25rem;
+        width: 100%;
     }
 
     .stat {
         border: 0.0625rem solid var(--accent);
         padding: 1.25rem;
         border-radius: 0.625rem;
+        width: 100%;
     }
 
     .float-badge.top-right {
-        right: -4.25rem;
-        top: 11rem;
+        right: auto;
+        top: 10.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: none;
     }
 
     .section-wrap {
@@ -872,15 +892,117 @@ section {
     .hero-cta {
         flex-direction: column-reverse;
         text-align: center;
+        margin: 1.5rem 0;
+        width: 100%;
     }
 
     .hero-description {
         max-width: 100%;
     }
 
+    .projects-grid,
+    .skills-grid,
+    .contact-wrapper {
+        gap: 1.5rem;
+    }
+
+    .project-card,
+    .skill-chip,
+    .contact-form,
+    .contact-info {
+        width: 100%;
+    }
+
+    .project-img {
+        min-height: 15rem;
+    }
+
+    .contact-card {
+        align-items: flex-start;
+    }
+
     .get-in-touch {
         border: 0.0625rem solid var(--accent);
         color: var(--accent);
+    }
+}
+
+@media (max-width: 36rem) {
+    header {
+        padding-inline: 1rem;
+    }
+
+    header .hireBtn {
+        padding: 0.45rem 0.75rem;
+        font-size: 0.78rem;
+    }
+
+    #hero {
+        padding-inline: 1rem;
+    }
+
+    .hero-name {
+        font-size: clamp(2.25rem, 14vw, 3rem);
+    }
+
+    .hero-role {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-ring {
+        inline-size: min(70vw, 13rem);
+    }
+
+    .float-badge.top-right {
+        top: calc(100% + 0.75rem);
+        width: max-content;
+        max-width: 90vw;
+    }
+
+    .section-wrap {
+        padding: 2.5rem 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.8rem, 10vw, 2.35rem);
+    }
+
+    .inner-skills-perc,
+    .contact-form,
+    .response-box {
+        padding: 1.25rem;
+    }
+
+    .info-row,
+    .contact-card {
+        gap: 0.75rem;
+    }
+
+    .project-body {
+        padding: 1.1rem;
+    }
+
+    .project-links {
+        flex-wrap: wrap;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+        left: -1.85rem;
     }
 }
 
