@@ -53,7 +53,7 @@ function Skills() {
                     <div className="skill-level">Advance</div>
                 </div>
                  <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">📦</div>
+                    <div className="skill-icon">⌬</div>
                     <div className="skill-name">Laravel</div>
                     <div className="skill-level">Familiar</div>
                 </div>
