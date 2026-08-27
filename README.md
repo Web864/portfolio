@@ -1,4 +1,23 @@
-# React + Vite
+# Portfolio
+
+This portfolio is deployed to GitHub Pages from the `main` branch by the workflow in `.github/workflows/deploy.yml`.
+
+For the first deployment, open the repository's **Settings > Pages** and set **Source** to **GitHub Actions**. Future pushes to `main` deploy automatically.
+
+To deploy manually, run:
+
+```bash
+npm run deploy
+```
+
+The site URL is `https://Web864.github.io/portfolio/`.
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
