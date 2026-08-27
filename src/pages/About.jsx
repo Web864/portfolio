@@ -68,6 +68,7 @@ function About() {
                     </div>
                   </div>
                  
+                 
                   <div className="perc-item-1">
                     <div className="flex justify-between mb-2">
                       <span className="span text-[var(--text)]">Node / js</span>
@@ -84,6 +85,15 @@ function About() {
                     </div>
                     <div className="h-5 perc-item-bar">
                       <div className="tailwind-item-bar-width item-bar-width"></div>
+                    </div>
+                  </div>
+                   <div className="perc-item-1">
+                    <div className="flex justify-between mb-2 ">
+                      <span className="span text-[var(--text)]">Laravel</span>
+                      <div className="text-[var(--muted)]">80%</div>
+                    </div>
+                    <div className="h-5 perc-item-bar">
+                      <div className="react-item-bar-width item-bar-width"></div>
                     </div>
                   </div>
                 </div>
