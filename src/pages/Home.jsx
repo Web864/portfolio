@@ -47,7 +47,7 @@ function Home() {
                     </div>
                     <div className="stat">
                         <div className="stat-num">
-                             100 <span className='text-purple-600'>+</span>
+                             200 <span className='text-purple-600'>+</span>
                         </div>
                         <div className="stat-label">
                            <h4>Connections</h4>
