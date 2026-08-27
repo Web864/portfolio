@@ -43,7 +43,7 @@ function Skills() {
                     <div className="skill-level">Advance</div>
                 </div> 
                 <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">🎨</div>
+                    <div className="skill-icon">🟣</div>
                     <div className="skill-name">SCSS</div>
                     <div className="skill-level">Advance</div>
                 </div> 
