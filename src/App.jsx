@@ -1,80 +1,56 @@
-import { useEffect } from 'react'
-import './App.css'
-import Header from './components/Header'
-import Home from './pages/Home'
-import About from './pages/About'
-import Skills from './pages/Skills'
-import Projects from './pages/Projects'
-import Experince from './pages/Experince'
-import Contact from './pages/Contact'
-import Footer from './pages/Footer'
+import { useEffect } from 'react';
+import './App.css';
+import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import Experince from './pages/Experince';
+import Contact from './pages/Contact';
+import Footer from './pages/Footer';
 
-
-
-function App() {
+export default function App() {
   useEffect(() => {
-    const revealItems = document.querySelectorAll('.fade-up')
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    if (prefersReducedMotion) {
-      revealItems.forEach((item) => item.classList.add('visible'))
-      return
-    }
-
-    document.body.classList.add('js-reveal-ready')
-
-    revealItems.forEach((item, index) => {
-      item.classList.remove('visible')
-      item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 0.08}s`)
-    })
-
-    let lastScrollY = window.scrollY
-    const handleScrollDirection = () => {
-      const currentScrollY = window.scrollY
-      document.body.classList.toggle('scrolling-up', currentScrollY < lastScrollY)
-      document.body.classList.toggle('scrolling-down', currentScrollY >= lastScrollY)
-      lastScrollY = currentScrollY
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle('visible', entry.isIntersecting)
-        })
-      },
-      {
-        threshold: 0.18,
-        rootMargin: '0px 0px -8% 0px',
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (media.matches || !('IntersectionObserver' in window)) return;
+    const items = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.documentElement.classList.add('reveal-enabled');
+    items.forEach(item => observer.observe(item));
+    const handleMotionChange = () => {
+      if (media.matches) {
+        document.documentElement.classList.remove('reveal-enabled');
+        observer.disconnect();
       }
-    )
-
-    revealItems.forEach((item) => observer.observe(item))
-    window.addEventListener('scroll', handleScrollDirection, { passive: true })
-    handleScrollDirection()
-
+    };
+    media.addEventListener('change', handleMotionChange);
     return () => {
-      observer.disconnect()
-      window.removeEventListener('scroll', handleScrollDirection)
-      document.body.classList.remove('js-reveal-ready', 'scrolling-up', 'scrolling-down')
-    }
-  }, [])
+      observer.disconnect();
+      media.removeEventListener('change', handleMotionChange);
+      document.documentElement.classList.remove('reveal-enabled');
+    };
+  }, []);
 
   return (
     <>
-    <Header />
-    <Home />
-    <About />
-    <Skills />
-    <Projects />
-    <Experince />
-    <Contact />
-    <Footer />
-
-
-
-
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <Header />
+      <main id="main-content" tabIndex={-1}>
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Experince />
+        <Contact />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
-
-export default App

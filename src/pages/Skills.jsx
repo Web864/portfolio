@@ -1,67 +1,27 @@
-import React from 'react'
+import { Braces, Database, Fingerprint, PanelsTopLeft, Wrench } from 'lucide-react';
+import { skillGroups } from '../data/portfolio';
 
-function Skills() {
+const icons = { frontend: PanelsTopLeft, laravel: Braces, data: Database, auth: Fingerprint, tools: Wrench };
+
+export default function Skills() {
   return (
-    <div id='skills'>
-        <div className="w-full section-wrap bg-[var(--surface)]">
-            <div className="section-header fade-up visible">
-                <div className="section-tag">Tech STack</div>
-                <h2 className="section-title">Skills & Technology</h2>
-                <p className="section-subtitle">A curated toolkit built over years of shipping production applications.</p>
-
-            </div>
-            <div className="skills-grid">
-                
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">⚛️</div>
-                    <div className="skill-name">React.js</div>
-                    <div className="skill-level">Proficient</div>
-                </div>
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">🟩</div>
-                    <div className="skill-name">Node.js</div>
-                    <div className="skill-level">Proficient</div>
-                </div>
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">🍃</div>
-                    <div className="skill-name">MongoDB</div>
-                    <div className="skill-level">Familiar</div>
-                </div>
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">🟡</div>
-                    <div className="skill-name">javaScript</div>
-                    <div className="skill-level">Proficient</div>
-                </div>
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">🅱️</div>
-                    <div className="skill-name">Bootstrap</div>
-                    <div className="skill-level">Advance</div>
-                </div>
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">🎨</div>
-                    <div className="skill-name">Tailwaind css</div>
-                    <div className="skill-level">Advance</div>
-                </div> 
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">🟣</div>
-                    <div className="skill-name">SCSS</div>
-                    <div className="skill-level">Advance</div>
-                </div> 
-                <div className="skill-chip fade-up visible">
-                    <div className="skill-icon">📦</div>
-                    <div className="skill-name">Git / Github</div>
-                    <div className="skill-level">Advance</div>
-                </div>
-                 <div className="skill-chip fade-up visible">
-                    <div className="skill-icon text-white">⌬</div>
-                    <div className="skill-name">Laravel</div>
-                    <div className="skill-level">Familiar</div>
-                </div>
-            </div>
+    <section id="skills" className="section skills-section" aria-labelledby="skills-title">
+      <div className="container">
+        <div className="section-label"><span>02 / TOOLKIT</span><span>Built for real work</span></div>
+        <div className="section-heading reveal"><h2 id="skills-title">The tools behind<br /><em>the interfaces.</em></h2><p>A practical toolkit for professional frontend work and personal application projects. Always learning, always validating.</p></div>
+        <div className="skills-grid">
+          {skillGroups.map(group => {
+            const Icon = icons[group.id];
+            return (
+              <article className={`skill-card reveal skill-card--${group.id}`} key={group.id}>
+                <div className="skill-card-heading"><span className="icon-box"><Icon size={21} aria-hidden="true" /></span><h3>{group.title}</h3></div>
+                <p>{group.description}</p>
+                <ul className="technology-list">{group.items.map(item => <li key={item}>{item}</li>)}</ul>
+              </article>
+            );
+          })}
         </div>
-
-    </div>
-  )
+      </div>
+    </section>
+  );
 }
-
-export default Skills

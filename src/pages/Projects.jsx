@@ -1,172 +1,49 @@
-import React from "react";
+import { Github } from '../components/BrandIcons';
+import { useState } from 'react';
+import { ArrowDown, ArrowUpRight, LayoutDashboard, LockKeyhole, Plus } from 'lucide-react';
+import { projects } from '../data/portfolio';
 
-function Projects() {
+function ProjectCard({ project, index }) {
   return (
-    <div id="projects">
-      <div className="section-wrap">
-        <div className="section-header fade-up visible">
-          <p className="section-tag">Portfolio</p>
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">
-            A selection of projects that showcase my approach to building
-            scalable, modern applications.
-          </p>
-        </div>
-        <div className="projects-grid">
-        <div className="project-card fade-up visible">
-          <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">🎓</div>
-            <div className="project-body">
-              <div className="project-tags">
-                <div className="tag tag-react">HTML</div>
-                <div className="tag tag-node">Bootstrap</div>
-                
-              </div>
-              <h3 className="project-ttile">Eduport</h3>
-              <p className="project-desc">
-                Built a fully responsive website 
-              </p>
-              <div className="project-links">
-                <a href="http://web864.github.io/Eduport" className="project-link">
-                  Live Demo
-                </a>
-                <a href="" className="project-link project-link-ghost">
-                  {" "}
-                  GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="project-card fade-up visible">
-          <div className="project-img project-gradient-1">
-            <div className ="projects-img-icon">🏢</div>
-            <div className="project-body">
-              <div className="project-tags">
-                <div className="tag tag-react">HTML</div>
-                <div className="tag tag-node">CSS</div>
-                
-              </div>
-              <h3 className="project-ttile">Estate </h3>
-              <p className="project-desc">
-               Developed a fully responsive Real Estate website
-              </p>
-              <div className="project-links">
-                <a href="https://web864.github.io/Estate/" className="project-link">
-                  Live Demo
-                </a>
-                <a href="" className="project-link project-link-ghost">
-                  {" "}
-                  GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="project-card fade-up visible">
-          <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">🛒</div>
-            <div className="project-body">
-              <div className="project-tags">
-                <div className="tag tag-react">React</div>
-                <div className="tag tag-node">Node.js</div>
-              
-              </div>
-              <h3 className="project-ttile">E-commerece Website</h3>
-              <p className="project-desc">
-                Built a fully responsive e-commerce web app
-              </p>
-              <div className="project-links">
-                <a href="http://web864.github.io/Ecommerce-with-React-js/" className="project-link">
-                  Live Demo
-                </a>
-                <a href="" className="project-link project-link-ghost">
-                  {" "}
-                  GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="project-card fade-up visible">
-          <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">💰</div>
-            <div className="project-body">
-              <div className="project-tags">
-                <div className="tag tag-react">HTML</div>
-                <div className="tag tag-node">Tailwind css</div>
-                {/* <div className="tag tag-mongo">MongoDB</div> */}
-              </div>
-              <h3 className="project-ttile">Financio</h3>
-              <p className="project-desc">
-                Developed a fully responsive Finance & Investment website.
-              </p>
-              <div className="project-links">
-                <a href="http://web864.github.io/Financio---Finance-and-Invetment-/" className="project-link">
-                  Live Demo
-                </a>
-                <a href="" className="project-link project-link-ghost">
-                  {" "}
-                  GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="project-card fade-up visible">
-          <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">🌈</div>
-            <div className="project-body">
-              <div className="project-tags">
-                <div className="tag tag-react">HTML</div>
-                <div className="tag tag-node">Bootstrap</div>
-                <div className="tag tag-mongo">MongoDB</div>
-              </div>
-              <h3 className="project-ttile">Color Lib</h3>
-              <p className="project-desc">
-                Startup you can build a website online using the Bootstrap builder.
-              </p>
-              <div className="project-links">
-                <a href="https://web864.github.io/Colorlib/" className="project-link">
-                  Live Demo
-                </a>
-                <a href="" className="project-link project-link-ghost">
-                  {" "}
-                  GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="project-card fade-up visible">
-          <div className="project-img projects-gredient-1">
-            <div className="projects-img-icon">💼</div>
-            <div className="project-body">
-              <div className="project-tags">
-                <div className="tag tag-react">HTML</div>
-                <div className="tag tag-node">Bootstrap</div>
-                
-              </div>
-              <h3 className="project-ttile">Career institue</h3>
-              <p className="project-desc">
-                copy of career institue website where student learn and grow
-              </p>
-              <div className="project-links">
-                <a href="" className="project-link">
-                  Live Demo
-                </a>
-                <a href="" className="project-link project-link-ghost">
-                  {" "}
-                  GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
+    <article className={`project-card${project.featured ? ' project-card--featured' : ' project-card--compact'}`} id={`project-${project.id}`}>
+      <div className={`project-preview preview--${project.theme || 'practice'}`} aria-hidden="true">
+        <div className="preview-top"><span>{project.featured ? 'PROJECT OVERVIEW' : 'WEB DESIGN & DEVELOPMENT'}</span><span>/{String(index + 1).padStart(2, '0')}</span></div>
+        {project.featured ? <>
+          <div className="preview-art"><span className="preview-ring" /><span className="preview-ring preview-ring--inner" /></div>
+          <div className="preview-wordmark">{project.id === 'laravel-dashboard' ? <><LayoutDashboard size={31} strokeWidth={1.3} /><span>Laravel<span className="preview-secondary">Dashboard UI</span></span></> : <span>{project.title}<span className="preview-dot">.</span></span>}</div>
+          <p className="preview-caption">{project.cover}</p>
+        </> : <div className="practice-wordmark">{project.title}<ArrowUpRight size={28} strokeWidth={1} /></div>}
+        <div className="preview-bottom"><span>{project.subtitle || 'Responsive website'}</span>{project.id === 'laravel-dashboard' && <LockKeyhole size={14} />}</div>
       </div>
-    </div>
+      <div className="project-body">
+        <div className="project-meta"><span>{project.category}</span>{project.status && <span className={`project-status${project.id === 'contnvra' ? ' status-development' : ''}`}>{project.status}</span>}</div>
+        <h3>{project.title}</h3>
+        <p className="project-description">{project.description}</p>
+        {project.contributions && <div className="project-contributions"><h4>MY CONTRIBUTION</h4><ul>{project.contributions.map(item => <li key={item}>{item}</li>)}</ul></div>}
+        {project.tech.length > 0 && <ul className="project-technologies" aria-label="Technologies">{project.tech.map(tech => <li key={tech}>{tech}</li>)}</ul>}
+        {(project.demo || project.repo) && <div className="project-links">
+          {project.demo && <a href={project.demo} className="text-link">View Project <ArrowUpRight size={17} aria-hidden="true" /></a>}
+          {project.repo && <a href={project.repo} className="text-link"><Github size={16} aria-hidden="true" /> Source Code</a>}
+        </div>}
+        {project.id === 'laravel-dashboard' && <p className="project-note"><LockKeyhole size={13} aria-hidden="true" /> Company work · Internal code and screens are private</p>}
+      </div>
+    </article>
   );
 }
 
-export default Projects;
+export default function Projects() {
+  const [expanded, setExpanded] = useState(false);
+  const visibleProjects = expanded ? projects : projects.filter(project => project.featured);
+  const additionalCount = projects.filter(project => !project.featured).length;
+
+  return (
+    <section id="projects" className="section projects-section" aria-labelledby="projects-title">
+      <div className="container">
+        <div className="section-label"><span>03 / SELECTED WORK</span><span>From interfaces to applications</span></div>
+        <div className="section-heading reveal"><h2 id="projects-title">Selected work<br /><em>& projects.</em></h2><p>A selection of professional development work and applications I've built or contributed to. Clear scope, real contributions.</p></div>
+        <div id="project-grid" className="projects-grid">{visibleProjects.map((project, index) => <ProjectCard project={project} index={index} key={project.id} />)}</div>
+        <div className="more-projects"><span>More explorations in web development</span><button type="button" className="button button-outline" aria-expanded={expanded} aria-controls="project-grid" onClick={() => setExpanded(!expanded)}>{expanded ? 'Show selected projects' : `Explore ${additionalCount} more projects`}{expanded ? <ArrowDown className="rotate-arrow" size={18} aria-hidden="true" /> : <Plus size={18} aria-hidden="true" />}</button></div>
+      </div>
+    </section>
+  );
+}

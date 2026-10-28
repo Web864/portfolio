@@ -19,17 +19,22 @@ npm install
 npm run dev
 ```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Content and assets
 
-Currently, two official plugins are available:
+Verified personal details, skill groups, projects, experience, and education are maintained in `src/data/portfolio.js`. Update this file to keep section content consistent. Each project has a unique ID; the four featured projects appear first, and the remaining practice projects expand in the same grid.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project covers are typographic overviews, not product screenshots. Career Institute dashboard work is limited to frontend contributions, and internal code/screens are not published. Contnvra is labeled as in development; NutriAI and ProspectAI are described as application concepts.
 
-## React Compiler
+The portrait is an optimized copy of the existing photograph. The supplied CV is served from `public/Rabia_Naz_AI_Frontend_Developer_CV.pdf` using Vite's base URL.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The contact form validates its fields and opens a `mailto:` draft in the visitor's email application for review and sending. It does not submit to a backend or display a delivery confirmation.
 
-## Expanding the ESLint configuration
+## Verification
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+npx eslint src
+npm exec vite preview
+```
+
+The existing GitHub Pages base path and deployment workflow are unchanged. Navigation uses local section anchors, with keyboard focus indicators, a skip link, mobile menu Escape support, and reduced-motion handling.

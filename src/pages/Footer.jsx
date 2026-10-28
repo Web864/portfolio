@@ -1,11 +1,12 @@
-import React from 'react'
+import { ArrowUp } from 'lucide-react';
+import { profile } from '../data/portfolio';
 
-function Footer() {
+export default function Footer() {
   return (
-    <footer className='bg-black text-[var(--muted)] text-center p-2'>
-        <p >Designed & built by <span className='text-[var(--text)]'>Rabia Naz</span> Â· Â© 2026 Â· All rights reserved</p>
-    </footer>
-  )
+    <footer className="site-footer"><div className="container footer-inner">
+      <a className="footer-name" href="#hero">{profile.name}<span>.</span></a>
+      <p>Designed & built with care · © {new Date().getFullYear()}</p>
+      <a className="back-to-top" href="#hero">Back to top <ArrowUp size={16} aria-hidden="true" /></a>
+    </div></footer>
+  );
 }
-
-export default Footer

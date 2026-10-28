@@ -1,81 +1,42 @@
-import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import avatar from "../assets/img/avtar.png";
+import { Github, Linkedin } from '../components/BrandIcons';
+import { ArrowDown, ArrowDownRight, ArrowUpRight, Download, MapPin } from 'lucide-react';
+import portrait from '../assets/img/portrait.jpg';
+import { profile } from '../data/portfolio';
 
-function Home() {
+export default function Home() {
   return (
-    <div className='w-full bg-[#121218] flex  items-center p-5  ' id='hero'>
-        <div className="hero-inner mb-5 flex justify-around">
-
-            <div className="hero-content text-white m-4">
-                 <div className="hero-badge p-3">
-                    <span className='badge-dot'></span>
-                    Available for work
-                </div>
-                <h1 className="hero-name">
-       <span className="gradient-text">Rabia Naz</span>
-                </h1>
-                <div className="hero-role">
-                    <h3>Mern Stack Devloper</h3>
-                </div>
-                <div className="hero-description">
-                   I craft scalable, high-performance web applications with a focus on clean architecture and delightful user experiences.  Passionate about turning complex ideas  into elegant digital products.
-                </div>
-                <div className="hero-cta flex m-5 gap-5">
-                <a href="#projects" className='btn work-btn py-2 px-5 rounded'>View My Work</a>
-                <a href="#contact" className='btn  hover:text-[var(--accent)] get-in-touch hover:border hover:border-[var(--accent)] py-2 px-5'>
-                    <i className="fa-solid fa-envelope "></i>
-                    Get In Touch</a>
-                </div>
-                <div className="stats-row flex gap-30">
-                    <div className="stat">
-                        <div className="stat-num">
-                             1 <span className='text-purple-600'>+</span>
-                        </div>
-                        <div className="stat-label">
-                           <h4>Years Experience</h4>
-                        </div>
-                    </div>
-                    <div className="stat">
-                        <div className="stat-num">
-                            <h1> 8 <span className='text-purple-600'>+</span></h1>
-                        </div>
-                        <div className="stat-label">
-                           <h4>Projects Build</h4>
-                        </div>
-                    </div>
-                    <div className="stat">
-                        <div className="stat-num">
-                             200 <span className='text-purple-600'>+</span>
-                        </div>
-                        <div className="stat-label">
-                           <h4>Connections</h4>
-                        </div>
-                    </div>
-                </div>
+    <section id="hero" className="hero" aria-labelledby="hero-title">
+      <div className="container">
+        <div className="hero-grid">
+          <div className="hero-content">
+            <p className="availability"><span aria-hidden="true" />Open to opportunities</p>
+            <p className="eyebrow hero-eyebrow">A THOUGHTFUL APPROACH TO THE WEB</p>
+            <h1 id="hero-title">Rabia <span>Naz<span className="name-period">.</span></span></h1>
+            <p className="hero-headline">{profile.headline}</p>
+            <p className="hero-description">{profile.intro}</p>
+            <div className="hero-actions">
+              <a href="#projects" className="button button-primary">View My Work <ArrowUpRight size={19} aria-hidden="true" /></a>
+              <a href={`${import.meta.env.BASE_URL}${profile.cv}`} download className="button button-outline">Download CV <Download size={17} aria-hidden="true" /></a>
+              <a href="#contact" className="text-link">Contact Me <ArrowUpRight size={16} aria-hidden="true" /></a>
             </div>
-            <div className="hero-visuals">
-                <div className="profile-ring">
-                    <div className="profile-inner">
-                        <span className="profile-initials">
-                            <img src={avatar} alt="Rabia Naz" />
-                        </span>
-                    </div>
-                </div>
-                {/* <div className="float-badge top-right">
-                    ⚡ MERN Stack
-                </div> */}
-                <div className="float-badge top-right">
-                    ⚡ MERN Stack
-                </div>
+            <div className="hero-socials">
+              <a href={profile.github}><Github size={17} aria-hidden="true" /> GitHub <ArrowUpRight size={13} aria-hidden="true" /></a>
+              <a href={profile.linkedin}><Linkedin size={17} aria-hidden="true" /> LinkedIn <ArrowUpRight size={13} aria-hidden="true" /></a>
             </div>
-
+          </div>
+          <div className="hero-portrait">
+            <span className="portrait-orbit" aria-hidden="true" />
+            <div className="portrait-frame"><img src={portrait} alt="Rabia Naz" width="720" height="720" fetchPriority="high" /></div>
+            <span className="portrait-spark" aria-hidden="true">✳</span>
+            <div className="portrait-caption"><span className="caption-mark" aria-hidden="true"><ArrowDownRight size={24} /></span><div><span>FOCUSED ON THE DETAILS</span><p>Thoughtful UI. Practical code.</p></div></div>
+            <p className="portrait-location"><MapPin size={13} aria-hidden="true" /> Based in Pakistan</p>
+          </div>
         </div>
-       
-
-    </div>
-  )
+        <div className="hero-bottom">
+          <p>FRONTEND CRAFT <span>/</span> APPLICATION THINKING <span>/</span> CONTINUOUS LEARNING</p>
+          <a href="#about">A little about me <ArrowDown size={16} aria-hidden="true" /></a>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Home
