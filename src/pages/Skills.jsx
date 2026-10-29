@@ -1,7 +1,7 @@
 import { Braces, Database, Fingerprint, PanelsTopLeft, Wrench } from 'lucide-react';
 import { skillGroups } from '../data/portfolio';
 
-const icons = { frontend: PanelsTopLeft, laravel: Braces, data: Database, auth: Fingerprint, tools: Wrench };
+const icons = { frontend: PanelsTopLeft, php: Braces, data: Database, auth: Fingerprint, tools: Wrench };
 
 export default function Skills() {
   return (

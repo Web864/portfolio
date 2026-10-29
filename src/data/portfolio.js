@@ -6,8 +6,8 @@ export const profile = {
   "github": "https://github.com/Web864",
   "linkedin": "https://www.linkedin.com/in/rabia-naz-01263b339/",
   "cv": "Rabia_Naz_AI_Frontend_Developer_CV.pdf",
-  "headline": "Frontend Developer | Laravel Dashboard UI | React & Next.js",
-  "intro": "I develop responsive, user-friendly web applications and admin dashboard interfaces. My experience includes frontend development for live Laravel projects, React and Next.js applications, API integration, and PHP/MySQL-based web solutions."
+  "headline": "Frontend Developer | React & Next.js | Laravel Application UI",
+  "intro": "I build responsive, user-friendly web applications with React and Next.js, connecting thoughtful interfaces with APIs and PHP/MySQL-based solutions."
 };
 
 export const skillGroups = [
@@ -29,11 +29,10 @@ export const skillGroups = [
     ]
   },
   {
-    "id": "laravel",
-    "title": "Laravel & PHP",
-    "description": "Frontend work in live applications. A PHP/MySQL foundation.",
+    "id": "php",
+    "title": "PHP & Web Integration",
+    "description": "Practical foundations for database-driven web interfaces.",
     "items": [
-      "Laravel Admin Dashboard Frontend",
       "PHP",
       "MySQL",
       "UI Integration",
@@ -83,31 +82,9 @@ export const skillGroups = [
 
 export const projects = [
   {
-    "title": "Laravel Admin Dashboard",
-    "category": "Professional Work",
-    "status": "Live project experience",
-    "description": "Developed and improved responsive frontend interfaces for admin dashboards within live Laravel-based applications at Career Institute.",
-    "tech": [
-      "Laravel (existing framework)",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tailwind CSS"
-    ],
-    "contributions": [
-      "Implemented responsive dashboard interfaces within existing Laravel applications.",
-      "Improved usability and resolved frontend issues through debugging and maintenance."
-    ],
-    "id": "laravel-dashboard",
-    "subtitle": "Career Institute",
-    "cover": "Dashboard interfaces",
-    "theme": "laravel",
-    "featured": true
-  },
-  {
     "title": "Contnvra",
     "category": "AI-Powered SaaS",
-    "status": "In development",
+    "status": "In Development",
     "description": "An AI-powered social media content automation platform focused on content planning, production workflows, approvals, scheduled publishing, and performance insights.",
     "tech": [],
     "contributions": [
@@ -134,6 +111,7 @@ export const projects = [
       "Implemented Supabase Auth, Google OAuth, PKCE, email verification, PostgreSQL data flows, and Row Level Security."
     ],
     "id": "nutriai",
+    "demo": "https://nutriai-cyan.vercel.app/",
     "subtitle": "Nutrition & fitness · Web + mobile",
     "cover": "A more personal approach.",
     "theme": "nutriai",
@@ -225,7 +203,7 @@ export const projects = [
       "HTML",
       "Bootstrap"
     ],
-    "description": "Recreated the Career Institute public website as a practice project. Separate from professional Laravel dashboard work.",
+    "description": "Recreated the Career Institute public website as a distinct HTML and Bootstrap practice project.",
     "category": "Practice Project",
     "demo": null,
     "id": "career-recreation",
@@ -241,8 +219,8 @@ export const experience = [
     "date": "January 2026 — Present",
     "current": true,
     "points": [
-      "Develop frontend interfaces for admin dashboards in live Laravel-based projects.",
-      "Build responsive layouts, translate Figma designs into functional pages, improve usability, and debug frontend issues."
+      "Develop frontend interfaces for live Laravel-based admin dashboard applications within existing codebases.",
+      "Build responsive layouts, convert Figma designs into functional pages, improve usability, and troubleshoot frontend issues."
     ]
   },
   {

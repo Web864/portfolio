@@ -21,9 +21,9 @@ npm run dev
 
 ## Content and assets
 
-Verified personal details, skill groups, projects, experience, and education are maintained in `src/data/portfolio.js`. Update this file to keep section content consistent. Each project has a unique ID; the four featured projects appear first, and the remaining practice projects expand in the same grid.
+Verified personal details, skill groups, projects, experience, and education are maintained in `src/data/portfolio.js`. Update this file to keep section content consistent. Each project has a unique ID; the three featured projects appear first, and the remaining practice projects expand in the same grid.
 
-The project covers are typographic overviews, not product screenshots. Career Institute dashboard work is limited to frontend contributions, and internal code/screens are not published. Contnvra is labeled as in development; NutriAI and ProspectAI are described as application concepts.
+The project artwork uses labeled concept illustrations, not product screenshots. Career Institute dashboard frontend work is presented only in the professional experience entry; internal code/screens are not published. Contnvra is labeled as in development; NutriAI and ProspectAI are described as application concepts.
 
 The portrait is an optimized copy of the existing photograph. The supplied CV is served from `public/Rabia_Naz_AI_Frontend_Developer_CV.pdf` using Vite's base URL.
 
@@ -38,3 +38,5 @@ npm exec vite preview
 ```
 
 The existing GitHub Pages base path and deployment workflow are unchanged. Navigation uses local section anchors, with keyboard focus indicators, a skip link, mobile menu Escape support, and reduced-motion handling.
+
+Typography uses self-hosted DM Sans and Instrument Serif. Their SIL Open Font Licenses are included under `src/assets/fonts/`.

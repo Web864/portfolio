@@ -1,0 +1,31 @@
+{
+  "checks": [
+    "Requested typography sizes and self-hosted fonts loaded",
+    "Three distinct featured projects, preserved NutriAI link, four roles and four qualifications",
+    "Unique sections and navigation, larger Contnvra card, labeled concept artwork, dashboard work only in experience",
+    "Actual 1440px desktop visuals exported",
+    "No horizontal overflow at 320, 360, 390, 600, 768, 1024, and 1440px",
+    "Mobile menu, Escape, and section navigation work",
+    "Additional projects expand once, collapse correctly, and contain no duplicates",
+    "CV download and required form validation pass",
+    "Actual matching mobile visuals exported",
+    "No browser runtime errors"
+  ],
+  "typography": {
+    "hero": "76px",
+    "weight": "700",
+    "heading": "44px",
+    "serif": "46px",
+    "body": "16px",
+    "nav": "14px",
+    "title": "24px",
+    "card": "18px",
+    "dm": true,
+    "instrument": true
+  },
+  "cv": {
+    "status": 200,
+    "bytes": 30851
+  },
+  "errors": []
+}
